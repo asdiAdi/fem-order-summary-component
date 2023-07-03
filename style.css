@@ -1,0 +1,190 @@
+:root {
+  /*colors*/
+  --white: #ffffff;
+  --zumthor: #e0e8ff;
+  --zircon: #f7f9ff;
+  --cloud-burst: #1f2e55;
+  --bermuda-gray: #717fa6;
+  --persian-blue: #382ae1;
+  --torea-bay-shadow: hsla(228, 87%, 40%, 0.1518);
+  --persian-blue-shadow: hsla(245, 75%, 52%, 0.1903);
+  --cornflower-blue: #766cf1;
+
+  /*fonts*/
+  --font-heading: 900 1.375rem "Red Hat Display", sans-serif;
+  --font-body: 500 0.9375rem/1.5625rem "Red Hat Display", sans-serif;
+  --font-label: 900 0.875rem "Red Hat Display", sans-serif;
+  --font-price: 500 0.875rem "Red Hat Display", sans-serif;
+  --font-link: 700 0.8125rem "Red Hat Display", sans-serif;
+
+  --font-heading-desktop: 900 1.75rem "Red Hat Display", sans-serif;
+  --font-body-desktop: 500 1rem/1.625rem "Red Hat Display", sans-serif;
+  --font-label-desktop: 900 1rem "Red Hat Display", sans-serif;
+  --font-price-desktop: 500 1rem "Red Hat Display", sans-serif;
+  --font-link-desktop: 700 0.875rem "Red Hat Display", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--zumthor);
+}
+
+.background {
+  width: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.summary {
+  width: 327px;
+  height: 567px;
+  background-color: var(--white);
+  border-radius: 1.25rem;
+  box-shadow: 0 2.5rem 2.5rem var(--torea-bay-shadow);
+  overflow: hidden;
+}
+
+.summary__container {
+  width: 100%;
+  padding: 2rem 1.5rem;
+}
+
+.summary__img {
+  width: 100%;
+  display: block;
+}
+
+.summary__title {
+  color: var(--cloud-burst);
+  font: var(--font-heading);
+  text-align: center;
+}
+
+.summary__description {
+  margin-top: 1rem;
+  color: var(--bermuda-gray);
+  font: var(--font-body);
+  text-align: center;
+}
+
+.summary__info {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  height: fit-content;
+  background-color: var(--zircon);
+  border-radius: 0.6875rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.summary__info__icon {
+  width: 3rem;
+}
+
+.summary__info__pricing {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0.1875rem;
+  position: absolute;
+  margin-left: 4.25rem;
+}
+
+.summary__info__pricing__label {
+  color: var(--cloud-burst);
+  font: var(--font-label);
+}
+
+.summary__info__pricing__price {
+  color: var(--bermuda-gray);
+  font: var(--font-price);
+}
+
+.summary__info__link {
+  color: var(--persian-blue);
+  font: var(--font-link);
+}
+.summary__info__link:active {
+  color: var(--cornflower-blue);
+  text-decoration: none;
+}
+
+.summary__button {
+  all: unset;
+  display: block;
+  margin-top: 1.5rem;
+  width: 100%;
+  height: 1.25rem;
+  color: var(--bermuda-gray);
+  font: var(--font-label);
+  font-size: 0.9375rem;
+  text-align: center;
+  cursor: pointer;
+}
+.summary__button:active {
+  color: var(--cloud-burst);
+}
+
+.summary__button--contained {
+  height: 3.125rem;
+  background-color: var(--persian-blue);
+  color: var(--white);
+  border-radius: 0.6875rem;
+  box-shadow: 0 1.25rem 1.25rem var(--persian-blue-shadow);
+}
+.summary__button--contained:active {
+  color: var(--white);
+  background-color: var(--cornflower-blue);
+}
+
+@media only screen and (min-width: 1440px) {
+  .summary {
+    width: 450px;
+    height: 697px;
+  }
+  .summary__container {
+    padding: 2.5rem 3rem 3rem 3rem;
+  }
+  .summary__title {
+    margin-top: 0.3125rem;
+    font: var(--font-heading-desktop);
+  }
+  .summary__description {
+    margin-top: 1.0625rem;
+    font: var(--font-body-desktop);
+  }
+  .summary__info {
+    margin-top: 1.25rem;
+    padding: 1.5625rem 1.5rem;
+  }
+  .summary__info__pricing {
+    gap: 0.375rem;
+  }
+  .summary__info__pricing__label {
+    font: var(--font-label-desktop);
+  }
+  .summary__info__pricing__price {
+    font: var(--font-price-desktop);
+  }
+  .summary__info__link {
+    font: var(--font-link-desktop);
+  }
+  .summary__button {
+    margin-top: 2rem;
+  }
+}

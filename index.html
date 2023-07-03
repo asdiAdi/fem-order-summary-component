@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Order summary component</title>
+
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Red Hat Display 500 700 900 -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <picture>
+      <source
+        media="(max-width: 1440px)"
+        srcset="images/pattern-background-mobile.svg"
+      />
+      <source
+        media="(min-width: 1440px)"
+        srcset="images/pattern-background-desktop.svg"
+      />
+      <img
+        src="images/pattern-background-mobile.svg"
+        alt="pattern-background"
+        class="background"
+      />
+    </picture>
+
+    <main>
+      <div class="summary">
+        <img
+          src="images/illustration-hero.svg"
+          alt="illustration-hero"
+          class="summary__img"
+        />
+
+        <div class="summary__container">
+          <h1 class="summary__title">Order Summary</h1>
+
+          <p class="summary__description">
+            You can now listen to millions of songs, audiobooks, and podcasts on
+            any device anywhere you like!
+          </p>
+
+          <div class="summary__info">
+            <img
+              src="images/icon-music.svg"
+              alt="icon-music"
+              class="summary__info__icon"
+            />
+            <span class="summary__info__pricing">
+              <span class="summary__info__pricing__label">Annual plan</span>
+              <span class="summary__info__pricing__price">$55.00/year</span>
+            </span>
+            <a href="#" class="summary__info__link">Change</a>
+          </div>
+
+          <button class="summary__button summary__button--contained">
+            Proceed to Payment
+          </button>
+          <button class="summary__button">Cancel Order</button>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
+<!--This is a solution to the [Order summary card challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/order-summary-component-QlPmajDUj).-->
