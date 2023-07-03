@@ -17,22 +17,6 @@
   </head>
 
   <body>
-    <picture>
-      <source
-        media="(max-width: 1440px)"
-        srcset="images/pattern-background-mobile.svg"
-      />
-      <source
-        media="(min-width: 1440px)"
-        srcset="images/pattern-background-desktop.svg"
-      />
-      <img
-        src="images/pattern-background-mobile.svg"
-        alt="pattern-background"
-        class="background"
-      />
-    </picture>
-
     <main>
       <div class="summary">
         <img
@@ -56,8 +40,8 @@
               class="summary__info__icon"
             />
             <span class="summary__info__pricing">
-              <span class="summary__info__pricing__label">Annual plan</span>
-              <span class="summary__info__pricing__price">$55.00/year</span>
+              <span class="summary__info__pricing__label">Annual Plan</span>
+              <span class="summary__info__pricing__price">$59.99/year</span>
             </span>
             <a href="#" class="summary__info__link">Change</a>
           </div>
@@ -69,5 +53,23 @@
         </div>
       </div>
     </main>
+
+    <section>
+      <picture>
+        <source
+          media="(max-width: 1440px)"
+          srcset="images/pattern-background-mobile.svg"
+        />
+        <source
+          media="(min-width: 1440px)"
+          srcset="images/pattern-background-desktop.svg"
+        />
+        <img
+          src="images/pattern-background-mobile.svg"
+          alt="pattern-background"
+          class="background"
+        />
+      </picture>
+    </section>
   </body>
 </html>
